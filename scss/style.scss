@@ -1,0 +1,172 @@
+$violet: hsl(257, 40%, 49%);
+$magenta: hsl(300, 69%, 71%);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  background: url(/images/bg-mobile.svg) $violet;
+  background-repeat: no-repeat;
+  background-size: contain;
+  // width: 90%;
+  height: 100vh;
+  text-align: center;
+  color: #fff;
+  margin: 0 1rem;
+  display: grid;
+  align-items: center;
+  grid-template-rows: 10% 35% 45% 10%;
+  grid-template-areas: 
+  'logo'
+  'illustration'
+  'text'
+  'socials';
+}
+
+.logo {
+  height: 45%;
+  justify-self: left;
+  grid-area: logo;
+
+  &__img {
+    height: 100%;
+    // margin-top: 2rem;
+  }
+}
+
+.illustration {
+  // height: 30%;
+  grid-area: illustration;
+  height: 90%;
+  margin-top: 2rem;
+
+  &__img {
+    height: 100%;
+  }
+}
+
+.main-text {
+  // width: 90%;
+  grid-area: text;
+  margin: 0 2rem;
+  // margin: auto;
+  // text-align: center;
+  &__header {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  &__p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.7;
+  }
+
+  &__btn {
+    padding: 0.8rem;
+    width: 60%;
+    margin-top: 2rem;
+    border-radius: 20px;
+    border: none;
+    font-family: 'Open Sans', sans-serif;
+    color: $violet;
+    cursor: pointer;
+    transition: all 0.5s ease;
+
+    &:hover {
+      background-color: $magenta;
+    }
+  }
+
+
+}
+
+.socials {
+  grid-area: socials;
+  margin-bottom: 1rem;
+
+  &__icon {
+    padding: 0.5rem;
+    border: 1px #fff solid;
+    border-radius: 50%;
+    margin: 0.5rem;
+    transition: all 0.5s ease;
+
+    &:hover {
+      color: $magenta;
+      border: 1px solid $magenta;
+    }
+
+    &:first {
+      padding: 0.5rem 0.7rem;
+    }
+  }
+}
+
+
+@media (min-width: 800px) {
+  body {
+    text-align: left;
+    background: url(/images/bg-desktop.svg) $violet;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+    margin: 0 auto;
+    width: 80%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 10% 80% 10%;
+    grid-template-areas: 
+    'logo .'
+    'illustration text'
+    '. socials'
+  }
+
+  .logo {
+    grid-area: logo;
+    height: 60%;
+    align-self: center;
+    
+    &__img {
+      margin-top: 0;
+      
+    }
+  }
+
+  .illustration {
+    grid-area: illustration;
+    align-self: center;
+    height: 60%;
+  }
+
+  .main-text {
+    grid-area: text;
+    padding-left: 3rem;
+
+    &__header {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    &__p {
+      margin-bottom: 1rem;
+      font-size: 1rem;
+    }
+
+    &__btn {
+      width: 35%;
+      margin: 0;
+    }
+  }
+
+  .socials {
+    grid-area: socials;
+    justify-self: end;
+    margin-right: 2rem;
+  }
+}

@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  background: url(/images/bg-mobile.svg) #674baf;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 100vh;
+  text-align: center;
+  color: #fff;
+  margin: 0 1rem;
+  display: grid;
+  align-items: center;
+  grid-template-rows: 10% 35% 45% 10%;
+  grid-template-areas: 'logo' 'illustration' 'text' 'socials'; }
+
+.logo {
+  height: 45%;
+  justify-self: left;
+  grid-area: logo; }
+  .logo__img {
+    height: 100%; }
+
+.illustration {
+  grid-area: illustration;
+  height: 90%;
+  margin-top: 2rem; }
+  .illustration__img {
+    height: 100%; }
+
+.main-text {
+  grid-area: text;
+  margin: 0 2rem; }
+  .main-text__header {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 1rem; }
+  .main-text__p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.7; }
+  .main-text__btn {
+    padding: 0.8rem;
+    width: 60%;
+    margin-top: 2rem;
+    border-radius: 20px;
+    border: none;
+    font-family: 'Open Sans', sans-serif;
+    color: #674baf;
+    cursor: pointer;
+    transition: all 0.5s ease; }
+    .main-text__btn:hover {
+      background-color: #e882e8; }
+
+.socials {
+  grid-area: socials;
+  margin-bottom: 1rem; }
+  .socials__icon {
+    padding: 0.5rem;
+    border: 1px #fff solid;
+    border-radius: 50%;
+    margin: 0.5rem;
+    transition: all 0.5s ease; }
+    .socials__icon:hover {
+      color: #e882e8;
+      border: 1px solid #e882e8; }
+    .socials__icon:first {
+      padding: 0.5rem 0.7rem; }
+
+@media (min-width: 800px) {
+  body {
+    text-align: left;
+    background: url(/images/bg-desktop.svg) #674baf;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+    margin: 0 auto;
+    width: 80%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 10% 80% 10%;
+    grid-template-areas: 'logo .' 'illustration text' '. socials'; }
+  .logo {
+    grid-area: logo;
+    height: 60%;
+    align-self: center; }
+    .logo__img {
+      margin-top: 0; }
+  .illustration {
+    grid-area: illustration;
+    align-self: center;
+    height: 60%; }
+  .main-text {
+    grid-area: text;
+    padding-left: 3rem; }
+    .main-text__header {
+      font-size: 2rem;
+      margin-bottom: 1rem; }
+    .main-text__p {
+      margin-bottom: 1rem;
+      font-size: 1rem; }
+    .main-text__btn {
+      width: 35%;
+      margin: 0; }
+  .socials {
+    grid-area: socials;
+    justify-self: end;
+    margin-right: 2rem; } }
