@@ -80,7 +80,7 @@ body {
     display: flex; }
   .logo__img {
     height: 7vh;
-    margin-top: 3rem; }
+    margin-top: 2rem; }
   .hero {
     display: flex;
     align-items: center; }
@@ -88,7 +88,8 @@ body {
       flex: 1; }
       .hero__illustration-img {
         width: 40vw;
-        height: auto; }
+        height: auto;
+        margin-right: 1.5rem; }
     .hero__text {
       flex: 1;
       max-width: 30vw;
