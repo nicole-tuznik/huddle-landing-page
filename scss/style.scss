@@ -12,83 +12,74 @@ body {
   background: url(/images/bg-mobile.svg) $violet;
   background-repeat: no-repeat;
   background-size: contain;
-  // width: 90%;
   height: 100vh;
   text-align: center;
   color: #fff;
-  margin: 0 1rem;
-  display: grid;
-  align-items: center;
-  grid-template-rows: 10% 35% 45% 10%;
-  grid-template-areas: 
-  'logo'
-  'illustration'
-  'text'
-  'socials';
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
 }
 
 .logo {
-  height: 45%;
-  justify-self: left;
-  grid-area: logo;
-
-  &__img {
-    height: 100%;
-    // margin-top: 2rem;
-  }
-}
-
-.illustration {
-  // height: 30%;
-  grid-area: illustration;
-  height: 90%;
-  margin-top: 2rem;
+  height: 2rem;
+  text-align: left;
+  margin-top: 1rem;
+  margin-left: 2rem;
 
   &__img {
     height: 100%;
   }
 }
 
-.main-text {
-  // width: 90%;
-  grid-area: text;
-  margin: 0 2rem;
-  // margin: auto;
-  // text-align: center;
-  &__header {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-  }
+.hero {
+  margin-top: auto;
 
-  &__p {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 0.9rem;
-    line-height: 1.7;
-  }
-
-  &__btn {
-    padding: 0.8rem;
-    width: 60%;
-    margin-top: 2rem;
-    border-radius: 20px;
-    border: none;
-    font-family: 'Open Sans', sans-serif;
-    color: $violet;
-    cursor: pointer;
-    transition: all 0.5s ease;
-
-    &:hover {
-      background-color: $magenta;
+  &__illustration {
+  
+    &-img {
+      height: 25vh;
+      width: auto;
     }
   }
-
-
+  
+  &__text {
+    grid-area: text;
+    margin: 1rem 2rem;
+    
+    &-header {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+  
+    &-p {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 0.9rem;
+      line-height: 1.7;
+    }
+  
+    &-btn {
+      padding: 0.8rem;
+      width: 75%;
+      margin-top: 1.5rem;
+      border-radius: 20px;
+      border: none;
+      font-family: 'Open Sans', sans-serif;
+      color: $violet;
+      cursor: pointer;
+      transition: all 0.5s ease;
+  
+      &:hover {
+        background-color: $magenta;
+      }
+    }
+  }
 }
 
 .socials {
-  grid-area: socials;
-  margin-bottom: 1rem;
+  margin-top: auto;
+  margin-bottom: 1.5rem;
 
   &__icon {
     padding: 0.5rem;
@@ -97,14 +88,14 @@ body {
     margin: 0.5rem;
     transition: all 0.5s ease;
 
+    &:first-child {
+      padding: 0.5rem 0.7rem;
+    }
+
     &:hover {
       color: $magenta;
       border: 1px solid $magenta;
-    }
-
-    &:first {
-      padding: 0.5rem 0.7rem;
-    }
+    }    
   }
 }
 
@@ -118,55 +109,60 @@ body {
     background-position: right;
     margin: 0 auto;
     width: 80%;
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 10% 80% 10%;
-    grid-template-areas: 
-    'logo .'
-    'illustration text'
-    '. socials'
+    max-width: 1300px;
+    display: flex;
+    
   }
 
   .logo {
-    grid-area: logo;
-    height: 60%;
-    align-self: center;
-    
     &__img {
-      margin-top: 0;
-      
+      height: 7vh;
+      margin-top: 3rem;
     }
   }
 
-  .illustration {
-    grid-area: illustration;
-    align-self: center;
-    height: 60%;
-  }
+  .hero {
+    display: flex;
+    align-items: center;
 
-  .main-text {
-    grid-area: text;
-    padding-left: 3rem;
+    &__illustration {
+      flex: 1;
 
-    &__header {
-      font-size: 2rem;
-      margin-bottom: 1rem;
+      &-img {
+        width: 40vw;
+        height: auto;
+      }
     }
-
-    &__p {
-      margin-bottom: 1rem;
-      font-size: 1rem;
-    }
-
-    &__btn {
-      width: 35%;
-      margin: 0;
+  
+    &__text {
+      flex: 1;
+      max-width: 30vw;
+      margin: auto;
+  
+      &-header {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+  
+      &-p {
+        margin-bottom: 2rem;
+        font-size: 1rem;
+      }
+  
+      &-btn {
+        width: 12rem;
+        margin: 0;
+        font-size: 1rem;
+      }
     }
   }
 
   .socials {
-    grid-area: socials;
-    justify-self: end;
-    margin-right: 2rem;
+    align-self: flex-end;
+    margin-bottom: 3rem;
+
+    &__icon {
+      font-size: 1.5rem;
+    }
   }
 }

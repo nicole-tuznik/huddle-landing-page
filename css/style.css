@@ -10,64 +10,62 @@ body {
   height: 100vh;
   text-align: center;
   color: #fff;
-  margin: 0 1rem;
-  display: grid;
-  align-items: center;
-  grid-template-rows: 10% 35% 45% 10%;
-  grid-template-areas: 'logo' 'illustration' 'text' 'socials'; }
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  max-width: 500px; }
 
 .logo {
-  height: 45%;
-  justify-self: left;
-  grid-area: logo; }
+  height: 2rem;
+  text-align: left;
+  margin-top: 1rem;
+  margin-left: 2rem; }
   .logo__img {
     height: 100%; }
 
-.illustration {
-  grid-area: illustration;
-  height: 90%;
-  margin-top: 2rem; }
-  .illustration__img {
-    height: 100%; }
-
-.main-text {
-  grid-area: text;
-  margin: 0 2rem; }
-  .main-text__header {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.5rem;
-    margin-bottom: 1rem; }
-  .main-text__p {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 0.9rem;
-    line-height: 1.7; }
-  .main-text__btn {
-    padding: 0.8rem;
-    width: 60%;
-    margin-top: 2rem;
-    border-radius: 20px;
-    border: none;
-    font-family: 'Open Sans', sans-serif;
-    color: #674baf;
-    cursor: pointer;
-    transition: all 0.5s ease; }
-    .main-text__btn:hover {
-      background-color: #e882e8; }
+.hero {
+  margin-top: auto; }
+  .hero__illustration-img {
+    height: 25vh;
+    width: auto; }
+  .hero__text {
+    grid-area: text;
+    margin: 1rem 2rem; }
+    .hero__text-header {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.5rem;
+      margin-bottom: 1rem; }
+    .hero__text-p {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 0.9rem;
+      line-height: 1.7; }
+    .hero__text-btn {
+      padding: 0.8rem;
+      width: 75%;
+      margin-top: 1.5rem;
+      border-radius: 20px;
+      border: none;
+      font-family: 'Open Sans', sans-serif;
+      color: #674baf;
+      cursor: pointer;
+      transition: all 0.5s ease; }
+      .hero__text-btn:hover {
+        background-color: #e882e8; }
 
 .socials {
-  grid-area: socials;
-  margin-bottom: 1rem; }
+  margin-top: auto;
+  margin-bottom: 1.5rem; }
   .socials__icon {
     padding: 0.5rem;
     border: 1px #fff solid;
     border-radius: 50%;
     margin: 0.5rem;
     transition: all 0.5s ease; }
+    .socials__icon:first-child {
+      padding: 0.5rem 0.7rem; }
     .socials__icon:hover {
       color: #e882e8;
       border: 1px solid #e882e8; }
-    .socials__icon:first {
-      padding: 0.5rem 0.7rem; }
 
 @media (min-width: 800px) {
   body {
@@ -78,33 +76,35 @@ body {
     background-position: right;
     margin: 0 auto;
     width: 80%;
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 10% 80% 10%;
-    grid-template-areas: 'logo .' 'illustration text' '. socials'; }
-  .logo {
-    grid-area: logo;
-    height: 60%;
-    align-self: center; }
-    .logo__img {
-      margin-top: 0; }
-  .illustration {
-    grid-area: illustration;
-    align-self: center;
-    height: 60%; }
-  .main-text {
-    grid-area: text;
-    padding-left: 3rem; }
-    .main-text__header {
-      font-size: 2rem;
-      margin-bottom: 1rem; }
-    .main-text__p {
-      margin-bottom: 1rem;
-      font-size: 1rem; }
-    .main-text__btn {
-      width: 35%;
-      margin: 0; }
+    max-width: 1300px;
+    display: flex; }
+  .logo__img {
+    height: 7vh;
+    margin-top: 3rem; }
+  .hero {
+    display: flex;
+    align-items: center; }
+    .hero__illustration {
+      flex: 1; }
+      .hero__illustration-img {
+        width: 40vw;
+        height: auto; }
+    .hero__text {
+      flex: 1;
+      max-width: 30vw;
+      margin: auto; }
+      .hero__text-header {
+        font-size: 2rem;
+        margin-bottom: 1rem; }
+      .hero__text-p {
+        margin-bottom: 2rem;
+        font-size: 1rem; }
+      .hero__text-btn {
+        width: 12rem;
+        margin: 0;
+        font-size: 1rem; }
   .socials {
-    grid-area: socials;
-    justify-self: end;
-    margin-right: 2rem; } }
+    align-self: flex-end;
+    margin-bottom: 3rem; }
+    .socials__icon {
+      font-size: 1.5rem; } }
