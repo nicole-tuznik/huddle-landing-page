@@ -22,13 +22,11 @@ body {
 }
 
 .logo {
-  height: 2rem;
   text-align: left;
-  margin-top: 1rem;
-  margin-left: 2rem;
 
   &__img {
-    height: 100%;
+    height: 5vh;
+    margin: 2rem 0 0 2rem;
   }
 }
 
@@ -117,7 +115,7 @@ body {
   .logo {
     &__img {
       height: 7vh;
-      margin-top: 2rem;
+      margin: 2rem 0 0 0;
     }
   }
 
